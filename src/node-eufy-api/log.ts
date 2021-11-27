@@ -13,9 +13,9 @@ export const custom = (message: any, ...optionalParams: any[]) => {
 	console.log(message, ...optionalParams);
 };
 
-let logVerbosity: Verbosity = Verbosity.ALL;
+let logVerbosity: Verbosity = Verbosity.INFO;
 export const setLogVerbosity = (verbosity: Verbosity) => {
-	logVerbosity = Verbosity.ALL;
+	logVerbosity = verbosity;
 };
 
 export const verbose = (callerFunctionName: string, message: any, ...optionalParams: any[]) => {

@@ -1,6 +1,6 @@
 {
   "name": "@ale770/homebridge-eufy",
-  "version": "0.3.6",
+  "version": "0.3.8",
   "description": "eufy plugin for homebridge: https://homebridge.io/",
   "keywords": [
     "homebridge-plugin"

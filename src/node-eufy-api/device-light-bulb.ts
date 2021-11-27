@@ -49,15 +49,19 @@ export class LightBulb extends AbstractDevice {
 		if (isWhiteLightBulb(this.model)) {
 			log.verbose('LightBulb.loadCurrentState', 'Parsing current state as white light bulb');
 
-			const bulbState = response.bulbinfo.packet.bulbstate;
+			try {
+				const bulbState = response.bulbinfo.packet.bulbstate;
 
-			this.power = bulbState.power === 1;
-			log.verbose('LightBulb.loadCurrentState', 'Current power state:', this.power);
+				this.power = bulbState.power === 1;
+				log.verbose('LightBulb.loadCurrentState', 'Current power state:', this.power);
 
-			this.state = {
-				brightness: bulbState.values.brightness,
-				temperature: bulbState.values.temperature
-			};
+				this.state = {
+					brightness: bulbState.values.brightness,
+					temperature: bulbState.values.temperature
+				};
+			} catch (e) {
+				// Do nothing
+			}
 
 			log.verbose('LightBulb.loadCurrentState', `Current brightness: ${this.state!.brightness} (might be unsupported)`);
 			log.verbose('LightBulb.loadCurrentState', `Current temperature: ${this.state!.temperature} (might be unsupported)`);

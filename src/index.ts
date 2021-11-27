@@ -1,4 +1,4 @@
-import { setLogVerbosity, Verbosity } from 'node-eufy-api';
+import { setLogVerbosity, Verbosity } from './node-eufy-api';
 import { API, pluginName, platformName } from './interfaces';
 import { EufyHome } from './platform';
 

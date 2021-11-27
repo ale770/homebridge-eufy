@@ -6,7 +6,11 @@
 		"declaration": true,
 		"strictNullChecks": true,
 		"noImplicitAny": true,
-		"noImplicitReturns": true
+		"noImplicitReturns": true,
+		"typeRoots": [
+      "./node_modules/@types",
+			"src/customtypes"
+    ]
 	},
 	"files": [
 		"src/index.ts"

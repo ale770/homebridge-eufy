@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-eufy",
+  "name": "@ale770/homebridge-eufy",
   "version": "0.3.5",
   "description": "eufy plugin for homebridge: https://homebridge.io/",
   "keywords": [
@@ -26,9 +26,15 @@
   },
   "devDependencies": {
     "@types/node": "^10.12.18",
+    "@types/inquirer": "6.0.3",
+    "@types/node-fetch": "^2.1.4",
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "node-eufy-api": "^0.3.4"
+    "bufferpack": "0.0.6",
+    "chalk": "^2.4.1",
+    "inquirer": "^8.0.0",
+    "node-fetch": "^2.3.0",
+    "protobufjs": "^6.8.8"
   }
 }
